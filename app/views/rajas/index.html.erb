@@ -1,0 +1,29 @@
+<h1>Users Data</h1>
+
+<table>
+  <thead>
+    <tr>
+     <t> <th>Sender</th> <td/>
+      <th>Reciver</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rajas.each do |raja| %>
+      <tr>
+        <td><%= raja.sender %></td>
+        <td><%= raja.reciver %></td>
+        <td><%= raja.message %></td>
+        <td><%= link_to 'Show', raja %></td>
+        <td><%= link_to 'Edit', edit_raja_path(raja) %></td>
+        <td><%= link_to 'Destroy', raja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raja', new_raja_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@raja) do |f| %>
+  <% if @raja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@raja.errors.count, "error") %> prohibited this raja from being saved:</h2>
+
+      <ul>
+      <% @raja.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sender %><br>
+    <%= f.text_field :sender %>
+  </div>
+  <div class="field">
+    <%= f.label :reciver %><br>
+    <%= f.text_field :reciver %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

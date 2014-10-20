@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @raja.sender %>
+</p>
+
+<p>
+  <strong>Reciver:</strong>
+  <%= @raja.reciver %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @raja.message %>
+</p>
+
+<%= link_to 'Edit', edit_raja_path(@raja) %> |
+<%= link_to 'Back', rajas_path %>
